@@ -6,18 +6,18 @@ import { Item } from '../item';
   selector: 'app-item-list',
   templateUrl: './item-list.component.html',
   styleUrls: ['./item-list.component.css'],
-  providers:[ItemService]
+  providers: [ItemService]
 })
 export class ItemListComponent implements OnInit {
 
-  title = "cosa da comprare";
+  title = "cose da comprare";
 
-  items:Item[];
- 
+  items: Item[];
 
-  constructor(private itemService : ItemService) { }
 
-  ngOnInit(){
+  constructor(private itemService: ItemService) { }
+
+  ngOnInit() {
     this.items = this.itemService.getItems();
   }
 

@@ -1,5 +1,5 @@
-export interface Item{
+export interface Item {
     name: string;
-    quantity:string;
-    checked?:boolean;
+    quantity: string;
+    checked: boolean;
 }
