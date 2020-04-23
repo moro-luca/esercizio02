@@ -19,8 +19,10 @@
 
 <hr>
 
-<div *ngIf="selectedItem">
+<div>
     <h2>Modifica</h2>
     <input type="text" [(ngModel)]="selectedItem.name"><br>
     <input type="number" [(ngModel)]="selectedItem.quantity">
 </div>
+
+<button (click)="addItem()">Add to list</button>

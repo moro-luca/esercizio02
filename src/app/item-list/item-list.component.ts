@@ -13,7 +13,11 @@ export class ItemListComponent implements OnInit {
   title = "cose da comprare";
 
   items: Item[];
-  selectedItem: Item;
+  selectedItem: Item = {
+    name: '',
+    quantity: 0,
+    checked: false
+  };
 
 
   constructor(private itemService: ItemService) { }
@@ -28,6 +32,15 @@ export class ItemListComponent implements OnInit {
 
   removeItem(item: Item): void {
     this.items = this.items.filter(x => x != item);
+  }
+
+  addItem(): void {
+    this.items.push(this.selectedItem);
+    this.selectedItem = {
+      name: '',
+      quantity: 0,
+      checked: false
+    }
   }
 
 }
