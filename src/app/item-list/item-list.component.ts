@@ -26,4 +26,8 @@ export class ItemListComponent implements OnInit {
     this.selectedItem = item;
   }
 
+  removeItem(item: Item): void {
+    this.items = this.items.filter(x => x != item);
+  }
+
 }
