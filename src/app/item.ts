@@ -1,5 +1,5 @@
 export interface Item {
     name: string;
-    quantity: string;
+    quantity: number;
     checked: boolean;
 }

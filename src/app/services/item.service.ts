@@ -2,18 +2,18 @@ import { Injectable } from '@angular/core';
 import { Item } from '../item';
 
 const ITEMS = [{
-    name : "Patate",
-    quantity: "1 busta",
-    checked: false
+  name: "Patate",
+  quantity: 1,
+  checked: false
 },
 {
-  name : "Pasta",
-  quantity: "2kg",
+  name: "Pasta",
+  quantity: 2,
   checked: false
 
-},{
-  name : "Pane",
-  quantity: "1kg",
+}, {
+  name: "Pane",
+  quantity: 1,
   checked: false
 }]
 
@@ -25,7 +25,7 @@ export class ItemService {
 
   constructor() { }
 
-  getItems(): Item[]{
+  getItems(): Item[] {
     return ITEMS;
   }
 }

@@ -13,12 +13,17 @@ export class ItemListComponent implements OnInit {
   title = "cose da comprare";
 
   items: Item[];
+  selectedItem: Item;
 
 
   constructor(private itemService: ItemService) { }
 
   ngOnInit() {
     this.items = this.itemService.getItems();
+  }
+
+  selectThisItem(item: Item): void {
+    this.selectedItem = item;
   }
 
 }
